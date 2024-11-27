@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaintech</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="Group.png" alt="Phone App">
+    <nav class="nav">
+      <a href="#" style="color: #00FFA7;">Company</a>
+      <a href="#">Services</a>
+      <a href="#">Business Models</a>
+      <a href="#">Blogs</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <div class="header-buttons">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="signup" style="color: #000;">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>WELCOME TO <br><span class="highlight">CHAINTECH</span></h1>
+    <p>
+      From square one to engineering excellence! PixelPlex assists in full-cycle software development,
+      jumps in to take it over, or brings dedicated top-demanded skills.
+    </p>
+    <a href="#" class="button" style="border-radius: 50px;">Get Started
+        <img src="right-arrow.svg" width="25px">
+    </a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="services-header">
+      <div class="services-text">
+        <h2>Services We Offer</h2>
+        <p>Discover the digital possibilities for your brand with our comprehensive suite of services.</p>
+      </div>
+      <div class="services-arrows">
+        <button class="arrow left"><img src="vector-left.svg" alt="Left"></button>
+        <button class="arrow right active"><img src="vector-right.svg" alt="Right"></button>
+      </div>
+    </div>
+    <div class="service-slider">
+      <div class="card">
+        <div class="card-top">
+          <img src="logo.svg" alt="Logo" class="card-logo">
+          <p class="join-text">Join Development</p>
+        </div>
+        <div class="card-middle">
+          <h3>Blockchain Development</h3>
+          <img src="blockchain-image.png" alt="Blockchain" class="card-image">
+        </div>
+        <div class="card-bottom">
+          <a href="#" class="button">Explore
+            <img src="gradient-arrow.svg">
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <img src="logo.svg" alt="Logo" class="card-logo">
+          <p class="join-text">Join Development</p>
+        </div>
+        <div class="card-middle">
+            <h3>Blockchain Development</h3>
+            <img src="blockchain-image-2.png" alt="Blockchain" class="card-image">
+          </div>
+        <div class="card-bottom">
+          <a href="#" class="button">Explore
+            <img src="gradient-arrow.svg">
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <img src="logo.svg" alt="Logo" class="card-logo">
+          <p class="join-text">Join Development</p>
+        </div>
+        <div class="card-middle">
+          <h3>Security AAS</h3>
+          <img src="security-image.png" alt="Motion Graphic" class="card-image">
+        </div>
+        <div class="card-bottom">
+          <a href="#" class="button">Explore
+            <img src="gradient-arrow.svg">
+          </a>
+        </div>
+      </div><div class="card">
+        <div class="card-top">
+          <img src="logo.svg" alt="Logo" class="card-logo">
+          <p class="join-text">Join Development</p>
+        </div>
+        <div class="card-middle">
+          <h3>Motion Graphic</h3>
+          <img src="motion-image.png" alt="Security" class="card-image">
+        </div>
+        <div class="card-bottom">
+          <a href="#" class="button">Explore
+            <img src="gradient-arrow.svg">
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <img src="logo.svg" alt="Logo" class="card-logo">
+          <p class="join-text">Join Development</p>
+        </div>
+        <div class="card-middle">
+          <h3>Motion Graphic</h3>
+          <img src="motion-image.png" alt="Motion Graphic" class="card-image">
+        </div>
+        <div class="card-bottom">
+          <a href="#" class="button">Explore
+            <img src="gradient-arrow.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App CTA -->
+  <section class="cta">
+    <img class="hand-image" style="border-radius: 50px;" src="hand-holding-phone.png" alt="Phone">
+    <div class="cta-content">
+      <h2>Your Partner From an Idea to Growth fuelled by Innovation.</h2>
+      <p>Empowering your business with innovative software solutions and 
+        captivating design.From concept to creation, we bring your vision 
+        to life with expertise and precision.</p>
+      <div class="store-buttons">
+        <a href="#"><img src="app-store.png" alt="App Store"></a>
+        <a href="#"><img src="google-play.png" alt="Google Play"></a>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+      <img src="Group.png" alt="Phone App">
+      <div class="divider"></div> <!-- This is the dividing line -->
+      <p>© 2024 All Rights Reserved - Chaintech Network</p>
+    </div>
+  </footer>
+  
+
+
+
+  <script>
+    const leftArrow = document.querySelector(".arrow.left");
+    const rightArrow = document.querySelector(".arrow.right");
+    const slider = document.querySelector(".service-slider");
+  
+    function updateArrowVisibility() {
+      leftArrow.style.border = slider.scrollLeft > 0 ? "2px solid #000" : "2px solid transparent";
+      rightArrow.style.border =
+        slider.scrollWidth > slider.clientWidth + slider.scrollLeft
+          ? "2px solid #000"
+          : "2px solid transparent";
+    }
+  
+    leftArrow.addEventListener("click", () => {
+      slider.scrollBy({ left: -300, behavior: "smooth" });
+      setTimeout(updateArrowVisibility, 300);
+    });
+  
+    rightArrow.addEventListener("click", () => {
+      slider.scrollBy({ left: 300, behavior: "smooth" });
+      setTimeout(updateArrowVisibility, 300);
+    });
+  
+    slider.addEventListener("scroll", updateArrowVisibility);
+  
+    window.addEventListener("resize", updateArrowVisibility);
+  
+    // Initial check
+    updateArrowVisibility();
+  </script>
+  
+</body>
+</html>
